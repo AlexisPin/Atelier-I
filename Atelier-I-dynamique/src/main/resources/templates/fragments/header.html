@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>HEADER</title>
+<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}" />
+</head>
+<body>
+
+  <div class="ui five column grid">
+            <div class="row"></div>
+            <div class="row">
+                <div class="five column"></div>
+            </div>
+            <div class="column"></div>
+            <div class="column"></div>
+            <div class="column">
+                <form class="ui form" action="./getCard" method="GET" name="mySearch">
+                    <h3 class="ui dividing header">Select the Card Name to Search</h3>
+                    <div class="two fields">
+                        <div class="field">
+                            <label>Card Name</label>
+                        </div>
+                        <div class="field">
+                            <div class="ui transparent icon input">
+                                <input type="text" placeholder="Search..." name="search">
+                                <i class="search link icon"  onclick="mySearch.submit();"></i>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="column"></div>
+            <div class="column"></div>
+        </div>
+</body>
+</html>

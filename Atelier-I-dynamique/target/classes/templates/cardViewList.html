@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+  <html xmlns:th="http://www.thymeleaf.org">
+  <head>
+  <meta charset="UTF-8" />
+  <title>Welcome</title>
+          <link rel="stylesheet" type="text/css" th:href="@{/lib/Semantic-UI-CSS-master/semantic.min.css}">
+  <link rel="stylesheet" type="text/css" th:href="@{/css/custom.css}" />
+  </head>
+  <body>
+
+<div class="ui segment">
+	<div class="ui five column grid" id="gridContainer">
+		<div class="column"></div>
+	     <div class="column" th:each="card : ${cardList}">
+		<div id="selectedCard" >
+		    <div class="column">   
+		        <div class="ui special cards">
+		            <div class="card">
+		                <div class="content">
+		                    <img class="ui avatar image" th:src=${card.imgUrl}> 
+		                    <p th:text="${card.family}"> </p>
+		                </div>
+		                <div class="image imageCard">
+		                    <div class="blurring dimmable image">
+		                        <div class="ui inverted dimmer">
+		                            <div class="content">
+		                                <div class="center">
+		                                    <div class="ui primary button">Add Friend</div>
+		                                </div>
+		                            </div>
+		                        </div>
+		                        <img class="ui centered tiny  image" th:src=${card.imgUrl}>
+		                    </div>
+		                </div>
+		
+		                <div class="extra content">
+		                    <div class="ui large transparent left icon input">
+		                        <i class="heart outline icon"></i>
+		                        <input type="text" placeholder="Add Comment...">
+		                    </div>
+		                </div>
+		                <div class="ui bottom attached button">
+		                    <i class="add icon"></i>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+		</div>
+		</div>
+		
+		
+		<div class="column">
+			<div id="selectedCard" >
+			    <div class="column">   
+			        <div class="ui special cards">
+			            <div class="card">
+			                <a href="addCard">
+			                <div class="ui bottomattached  button addCard">
+			                    <i class="add icon addIcon"></i>
+			                </div>
+			                </a>
+			            </div>
+			        </div>
+			    </div>
+			</div>
+		</div>
+	</div>
+</div>
+        <script th:src="@{/lib/jquery-3.3.1.min.js}"></script>
+        <script th:src="@{/lib/Semantic-UI-CSS-master/semantic.js}"></script>
+  </body>
+  </html>

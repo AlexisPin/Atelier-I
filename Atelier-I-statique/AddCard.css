@@ -1,0 +1,17 @@
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: 10px;
+}
+
+.field {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+}
