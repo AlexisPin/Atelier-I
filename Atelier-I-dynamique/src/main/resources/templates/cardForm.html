@@ -58,37 +58,43 @@
 			</div>
 			
 			<div class="field">
-				<label  for="form-hp">Hp</label>
-				<div>
-				  <input type="range" id="form-hp" th:field="*{hp}" min="0" max="100">
+				<label  for="form-affinity">Affinity</label>
+				<div >
+					<select id="form-affinity" th:field="*{affinity}">
+					    <option th:value="'F'" th:text="Fire"></option>
+					    <option th:value="'W'" th:text="Water"></option>
+					</select>
 				</div>
+			</div>
+			
+			<div class="field">
+				<label  for="form-hp">HP</label>
+				<input type="range" id="form-hp" th:field="*{hp}" min="0" max="100">
 			</div>
 			
 			<div class="field">
 				<label  for="form-energy">Energy</label>
-				<div>
 				  <input type="range" id="form-energy" th:field="*{energy}" min="0" max="100">
-				</div>
 			</div>
 			
 			<div class="field">
 				<label  for="form-attack">Attack</label>
-				<div>
+				
 				  <input type="range" id="form-attack" th:field="*{attack}" min="0" max="100">
-				</div>
+				
 			</div>
 			
 			<div class="field">
-				<label  for="form-defence">Defence</label>
-				<div>
+				<label  for="form-defence">Defense</label>
+				
 				  <input type="range" id="form-defence" th:field="*{defense}" min="0" max="100">
-				</div>
+				
 			</div>
 	
-			<div class="ui grid">
-				<div class="four column row">
-					<button class="ui button left floated column" type="reset" >Cancel</button>  
-					<button class="ui button right floated column" type="submit" ><i class="plus icon"></i>OK</button>
+			<div class="ui grid button-container">
+				<div class="four column row button-grid">
+					<button class="ui button column" type="reset" >Cancel</button>  
+					<button class="ui button column" type="submit" ><i class="plus icon"></i>OK</button>
 				</div>
 			</div>
 		</fieldset>

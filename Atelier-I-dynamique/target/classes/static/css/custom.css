@@ -33,6 +33,27 @@ body{
 }
 
 .addIcon{
-	scale : 2.0;
-	padding-top : 60px
+	scale : 2.5;
+	padding-top : 100px
+}
+
+.field {
+	display : flex;
+	justify-content : space-between
+}
+
+input[type=range]{
+	width : 80%
+}
+
+field.input[type=text]{
+	width : 60%
+}
+
+.button-container {
+	justify-content : space-between;
+}
+
+.button-grid{
+	margin : 5px;
 }

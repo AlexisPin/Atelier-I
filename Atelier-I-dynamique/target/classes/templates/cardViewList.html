@@ -11,7 +11,7 @@
 <div class="ui segment">
 	<div class="ui five column grid" id="gridContainer">
 		<div class="column"></div>
-	     <div class="column" th:each="card : ${cardList}">
+	     <div class="column" th:each="card : ${cardList}" >
 		<div id="selectedCard" >
 		    <div class="column">   
 		        <div class="ui special cards">
@@ -54,7 +54,7 @@
 			    <div class="column">   
 			        <div class="ui special cards">
 			            <div class="card">
-			                <a href="addCard">
+			                <a th:href="@{addCard}">
 			                <div class="ui bottomattached  button addCard">
 			                    <i class="add icon addIcon"></i>
 			                </div>
